@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodAnalyzer", "MoodAnalyzer\MoodAnalyzer.csproj", "{6699133C-187B-4C8D-AF31-E2A7A4C55E44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodAnalyzerMSTesting", "MoodAnalyzerMSTesting\MoodAnalyzerMSTesting.csproj", "{C0342984-02AC-4779-A835-9FB673BE024D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6699133C-187B-4C8D-AF31-E2A7A4C55E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6699133C-187B-4C8D-AF31-E2A7A4C55E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6699133C-187B-4C8D-AF31-E2A7A4C55E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6699133C-187B-4C8D-AF31-E2A7A4C55E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0342984-02AC-4779-A835-9FB673BE024D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0342984-02AC-4779-A835-9FB673BE024D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0342984-02AC-4779-A835-9FB673BE024D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0342984-02AC-4779-A835-9FB673BE024D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6511182-6411-473B-A8AF-4A71029AFF07}
+	EndGlobalSection
+EndGlobal
