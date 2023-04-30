@@ -8,26 +8,47 @@ namespace MoodAnalyzerMSTesting
     {
         [TestMethod]
 
-        //TestCase1.1
-        public void TestCaseMethod1_1()
+        // Refactored with NoParms TestCase1.1
+        public void TestCaseMethod1_1NoParms()
         {
             MoodAnalysis analysis = new MoodAnalysis();
-
             string expected = "Sad";
-            string actualResult=analysis.AnalysisMethod("i am in sad mood");
-             Assert.AreEqual(expected, actualResult);
-      
+            analysis.message = "i am in sad mood";
+            string actualResult = analysis.AnalysisMethod();
+            Assert.AreEqual(expected, actualResult);
         }
 
         [TestMethod]
 
-        //TestCase1.2
-        public void TestCaseMethod1_2()
+        // Refactored with parms TestCase1.2
+        public void TestCaseMethod1_2NoParms()
         {
             MoodAnalysis analysis = new MoodAnalysis();
-
             string expected = "Happy";
-            string actualResult = analysis.AnalysisMethod("i am any mood");
+            analysis.message = "i am in any mood";
+            string actualResult = analysis.AnalysisMethod();
+            Assert.AreEqual(expected, actualResult);
+        }
+
+        [TestMethod]
+
+        // Refactored with parms TestCase1.1
+        public void TestCaseMethod1_1()
+        {
+            MoodAnalysis analysis = new MoodAnalysis("i am in sad mood");
+            string expected = "Sad";
+            string actualResult=analysis.AnalysisMethod();
+            Assert.AreEqual(expected, actualResult);      
+        }
+
+        [TestMethod]
+
+        // Refactored with parms TestCase1.2
+        public void TestCaseMethod1_2()
+        {
+            MoodAnalysis analysis = new MoodAnalysis("i am any mood");
+            string expected = "Happy";
+            string actualResult = analysis.AnalysisMethod();
             Assert.AreEqual(expected, actualResult);
         }
        
