@@ -4,8 +4,23 @@ using System.Text;
 
 namespace MoodAnalyzer
 {
+    public class MoodAnalysisException : Exception
+    {
+        public  enum ExMsg
+        {
+          Null,
+          empty,        
+        }
+        private readonly ExMsg  type;
+        public MoodAnalysisException(ExMsg types,string Msg) :base(Msg)
+        {
+         this.type=types;
+        }
+    }
     public class MoodAnalysis
     {
+        
+
         public  string message;
         public MoodAnalysis(string Message) 
         {
@@ -17,11 +32,10 @@ namespace MoodAnalyzer
         }
         public string AnalysisMethod() 
         {
-           try {
+           try{
                 if (string.IsNullOrEmpty(message))
                 {
-                  throw new Exception("Happy");
-
+                  throw new MoodAnalysisException(MoodAnalysisException.ExMsg.empty,"msg Should not be empty or null ");
                 }
                 message.ToLower();
                 bool AnalysisData = false;
@@ -36,11 +50,11 @@ namespace MoodAnalyzer
                     return "Happy";
                 }
 
-                 }
+           }
             
-            catch(Exception e)
+           catch(MoodAnalysisException cMsg)
            {
-                return e.Message;
+                return cMsg.Message;    
            }
                
         
