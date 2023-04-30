@@ -17,19 +17,32 @@ namespace MoodAnalyzer
         }
         public string AnalysisMethod() 
         {
-       
+           try {
+                if (string.IsNullOrEmpty(message))
+                {
+                  throw new Exception("Happy");
+
+                }
                 message.ToLower();
                 bool AnalysisData = false;
                 AnalysisData = message.Contains("sad");
-                if (AnalysisData==true) 
+                if (AnalysisData == true)
                 {
-                    return"Sad";
+                    return "Sad";
 
                 }
-                else 
+                else
                 {
-                    return"Happy";
+                    return "Happy";
                 }
+
+                 }
+            
+            catch(Exception e)
+           {
+                return e.Message;
+           }
+               
         
         }
     }
